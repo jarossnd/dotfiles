@@ -1,7 +1,27 @@
-general.import = [
-  # uncomment the flavour you want below:
-  #"~/.config/alacritty/catppuccin-latte.toml"
-  # "~/.config/alacritty/catppuccin-frappe.toml"
-  # "~/.config/alacritty/catppuccin-macchiato.toml"
-   "~/.config/alacritty/catppuccin-mocha.toml"
+
+# Catppuccin theme
+[general]
+import = [
+    "~/.config/alacritty/catppuccin-mocha.toml"
 ]
+
+# Font configuration
+[font]
+size = 12.0
+
+[font.normal]
+family = "MonoLisa"
+style = "Regular"
+
+[font.bold]
+family = "MonoLisa"
+style = "Bold"
+
+[font.italic]
+family = "MonoLisa"
+style = "Italic"
+
+[font.bold_italic]
+family = "MonoLisa"
+style = "Bold Italic"
+
