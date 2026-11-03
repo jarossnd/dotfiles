@@ -10,6 +10,12 @@ vim.pack.add({
     -- GitHub Copilot
   gh("github/copilot.vim"),
   gh("CopilotC-Nvim/CopilotChat.nvim"),
+  gh("nvim-lua/plenary.nvim"),
+  gh("obsidian-nvim/obsidian.nvim"),
+  gh("OXY2DEV/markview.nvim"),
+  gh("neovim/nvim-lspconfig"),
+  gh("mason-org/mason.nvim"),
+  gh("barreiroleo/ltex_extra.nvim"),
 })
 
 vim.pack.add({

@@ -21,6 +21,8 @@ This repository uses a **bare Git repository** to manage configuration files dir
 
 ## 1. Install Core Packages
 
+### Arch
+
 Update Arch Linux and install the primary development packages:
 
 ```bash
@@ -36,6 +38,29 @@ sudo pacman -Syu --needed \
   ripgrep \
   fd \
   wl-clipboard
+```
+
+### Ubuntu
+
+Update Ubuntu Linux and install the primary development packages:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install -y \
+  git \
+  curl \
+  wget \
+  unzip \
+  build-essential \
+  alacritty \
+  zsh \
+  nodejs \
+  npm \
+  ripgrep \
+  fd-find \
+  wl-clipboard \
+  fontconfig
 ```
 
 ## 2. Fonts

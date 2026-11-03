@@ -111,3 +111,24 @@ export PATH="$PATH:/home/jason/.local/bin"
 
 # Managing dot files
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+# ------------------------------------------------------------------------------
+# Neovim - Ubuntu-specific PATH configuration
+# ------------------------------------------------------------------------------
+# Ubuntu's official APT repositories may provide an older version of Neovim.
+# To use a newer release, Neovim is installed manually from the official
+# GitHub release archive into /opt/nvim-linux-x86_64.
+#
+# This configuration ensures that:
+#   - Ubuntu prioritizes the manually installed Neovim over the APT version.
+#   - Arch Linux continues using its native pacman-managed Neovim installation.
+#   - The same .zshrc can be shared across both systems via the dotfiles repo.
+#   - The PATH is only modified when the Ubuntu installation actually exists.
+#
+# /etc/os-release is used to identify Ubuntu before modifying the PATH.
+# ------------------------------------------------------------------------------
+if [[ -f /etc/os-release ]] && grep -q '^ID=ubuntu$' /etc/os-release; then
+    if [[ -x /opt/nvim-linux-x86_64/bin/nvim ]]; then
+        path=(/opt/nvim-linux-x86_64/bin $path)
+    fi
+fi
