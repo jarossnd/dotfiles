@@ -132,3 +132,9 @@ if [[ -f /etc/os-release ]] && grep -q '^ID=ubuntu$' /etc/os-release; then
         path=(/opt/nvim-linux-x86_64/bin $path)
     fi
 fi
+
+# Load machine-specific shell settings.
+# This file is not tracked in the dotfiles repository.
+if [[ -f "$HOME/.zshrc.local" ]]; then
+  source "$HOME/.zshrc.local"
+fi
